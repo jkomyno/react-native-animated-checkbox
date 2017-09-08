@@ -1,0 +1,37 @@
+{
+  "name": "react-native-animated-checkbox",
+  "version": "1.0.0",
+  "description": "Minimalistic, animated and customizable <CheckBox /> component for React Native.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkomyno/react-native-animated-checkbox.git"
+  },
+  "keywords": [
+    "react-native",
+    "ui",
+    "animation",
+    "animated"
+  ],
+  "author": "Alberto Schiabel [https://github.com/jkomyno]",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkomyno/react-native-animated-checkbox/issues"
+  },
+  "homepage": "https://github.com/jkomyno/react-native-animated-checkbox#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "prop-types": "^15.5.10",
+    "react": ">=15.0.0",
+    "react-native": ">=0.44.0"
+  }
+}

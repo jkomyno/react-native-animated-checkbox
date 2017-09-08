@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# IDE
+.vscode/
+
+# extras
+.eslintrc
+.editorconfig
+.travis.yml
+yarn.lock
+.DS_Store
