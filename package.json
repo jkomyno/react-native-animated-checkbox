@@ -1,6 +1,6 @@
 {
   "name": "react-native-animated-checkbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimalistic, animated and customizable <CheckBox /> component for React Native.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
