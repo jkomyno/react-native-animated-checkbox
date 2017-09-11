@@ -16,6 +16,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  defaultStyle: {
+    backgroundColor: 'transparent',
+    margin: 2,
+    padding: 1,
+    borderRadius: 0,
+    borderWidth: 2,
+  },
 });
 
 export default class Checkbox extends PureComponent {
@@ -47,17 +54,15 @@ export default class Checkbox extends PureComponent {
 
   constructor(props) {
     super(props);
-    const defaultStyle = {
-      backgroundColor: 'transparent',
-      margin: 2,
-      padding: 1,
-      borderRadius: 0,
-      borderWidth: 2,
-      borderColor: props.color,
-    };
 
     this.opacity = new Animated.Value(props.checked ? 1 : 0);
-    this.style = Object.assign({}, defaultStyle, props.style);
+    this.style = Object.assign({},
+      {
+        ...styles.defaultStyle,
+        borderColor: this.props.color,
+      },
+      props.style,
+    );
     this.state = {
       pointerEvents: this.getPointerEvents(props.onPress),
     };
@@ -70,6 +75,15 @@ export default class Checkbox extends PureComponent {
       this.setState({
         pointerEvents: this.getPointerEvents(nextProps.onPress),
       });
+    }
+    if (nextProps.style) {
+      this.style = Object.assign({},
+        {
+          ...styles.defaultStyle,
+          borderColor: nextProps.color,
+        },
+        nextProps.style,
+      );
     }
   }
 
