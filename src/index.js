@@ -71,7 +71,7 @@ export default class Checkbox extends PureComponent {
       });
     }
     if (nextProps.style !== this.props.style) { // probably doesn't work since it's not immutable
-      this.setInstanceStyle(nextprops);
+      this.setInstanceStyle(nextProps);
     }
   }
 

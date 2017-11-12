@@ -1,12 +1,17 @@
 {
   "name": "react-native-animated-checkbox",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimalistic, animated and customizable <CheckBox /> component for React Native.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
     "lint": "eslint ./src"
   },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jkomyno/react-native-animated-checkbox.git"
