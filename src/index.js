@@ -56,13 +56,7 @@ export default class Checkbox extends PureComponent {
     super(props);
 
     this.opacity = new Animated.Value(props.checked ? 1 : 0);
-    this.style = Object.assign({},
-      {
-        ...styles.defaultStyle,
-        borderColor: this.props.color,
-      },
-      props.style,
-    );
+    this.setInstanceStyle(props);
     this.state = {
       pointerEvents: this.getPointerEvents(props.onPress),
     };
@@ -76,14 +70,8 @@ export default class Checkbox extends PureComponent {
         pointerEvents: this.getPointerEvents(nextProps.onPress),
       });
     }
-    if (nextProps.style) {
-      this.style = Object.assign({},
-        {
-          ...styles.defaultStyle,
-          borderColor: nextProps.color,
-        },
-        nextProps.style,
-      );
+    if (nextProps.style !== this.props.style) { // probably doesn't work since it's not immutable
+      this.setInstanceStyle(nextprops);
     }
   }
 
@@ -103,6 +91,15 @@ export default class Checkbox extends PureComponent {
     if (onPress) {
       onPress(!checked);
     }
+  }
+
+  setInstanceStyle = (props) => {
+    this.style = Object.assign({},
+      Object.assign({}, styles.defaultStyle, {
+        borderColor: props.color,
+      }),
+      props.style,
+    );
   }
 
   getPointerEvents = (onPress) => {
