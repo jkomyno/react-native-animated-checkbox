@@ -5,13 +5,12 @@ import {
   TouchableOpacity,
   View,
   ViewPropTypes,
-  StyleSheet,
 } from 'react-native';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import Icon from 'react-native-vector-icons/FontAwesome';
 /* eslint-enable */
 
-const styles = StyleSheet.create({
+const styles = {
   iconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -23,7 +22,7 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     borderWidth: 2,
   },
-});
+};
 
 export default class Checkbox extends PureComponent {
   static propTypes = {
