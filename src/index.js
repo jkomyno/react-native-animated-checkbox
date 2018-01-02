@@ -11,7 +11,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 /* eslint-enable */
 
-const styles = StyleSheet.create({
+const styles = {
   iconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     borderWidth: 2,
   },
-});
+};
 
 export default class Checkbox extends PureComponent {
   static propTypes = {
