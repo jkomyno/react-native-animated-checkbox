@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   View,
   ViewPropTypes,
-  StyleSheet,
 } from 'react-native';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import Icon from 'react-native-vector-icons/FontAwesome';
